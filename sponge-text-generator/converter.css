@@ -10,6 +10,7 @@
 
 html {
 	font-size: 100%;
+	height: 100%;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
 	background-size: cover;
 	font-family: var(--text-style);
 	background-color: #5edfff;
-	height: 1vh;
+
 }
 
 h1 {
