@@ -20,6 +20,7 @@ body {
 	background-size: cover;
 	font-family: var(--text-style);
 	background-color: #5edfff;
+	height: 100%;
 }
 
 h1 {
