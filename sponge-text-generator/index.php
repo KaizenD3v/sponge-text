@@ -1,1 +1,1 @@
-<?php include_once("../html/converter.html") ?>
+<?php header('converter.html'); ?>
