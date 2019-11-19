@@ -14,7 +14,6 @@ function convertText() {
 	let convertedText;
 
 
-	console.log(userInputValueLower);
 	inputToArray.forEach(pushMixCase);
 
 	function pushMixCase(elm, index) {
