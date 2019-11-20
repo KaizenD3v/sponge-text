@@ -14,7 +14,7 @@ html {
 }
 
 body {
-	background: url("sponge-text-generator/blue.jpg") no-repeat center center fixed;	
+	background: url("blue.jpg") no-repeat center center fixed;	
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
