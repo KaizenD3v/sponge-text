@@ -1,1 +1,1 @@
-<?php include_once("/sponge-text-generator/converter.html"); ?>
+<?php include_once("../sponge-text-generator/converter.html"); ?>
