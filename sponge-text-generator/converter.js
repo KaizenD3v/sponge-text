@@ -17,18 +17,12 @@ function convertText() {
 	inputToArray.forEach(pushMixCase);
 
 	function pushMixCase(elm, index) {
+		if( index % 2 === 1) {
+		outputValue.push(userInputValueLower[index].toUpperCase());
 
-		if( index === 0 ) {
-			outputValue.push(userInputValueLower[index].toLowerCase());
 		}
 		else {
-			if( index % 2 === 1) {
-			outputValue.push(userInputValueLower[index].toUpperCase());
-
-			}
-			else {
-				outputValue.push(userInputValueLower[index]);
-			}
+			outputValue.push(userInputValueLower[index]);
 		}
 	}
 	convertedText = outputValue.join('');
