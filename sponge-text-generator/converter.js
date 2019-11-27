@@ -7,8 +7,8 @@ const spongeImage = document.querySelector('#sponge-meme');
 
 
 function convertText() {
-	const userInputValue = userInput.value;
-	const userInputValueLower = userInputValue.toLowerCase();
+	const userInputValue = userInput.value.toLowerCase();
+	let toggleCaseFlag = false;
 	let outputValue = [];
 	const inputToArray = userInputValue.split('');
 	let convertedText;
@@ -17,13 +17,15 @@ function convertText() {
 	inputToArray.forEach(pushMixCase);
 
 	function pushMixCase(elm, index) {
-		if( index % 2 === 1) {
-		outputValue.push(userInputValueLower[index].toUpperCase());
-
+		if( elm !== ' ' && toggleCaseFlag === false && elm.match(new RegExp('[a-zA-Z]')) ) {
+			outputValue.push(userInputValue[index]);
+			toggleCaseFlag = true;
 		}
-		else {
-			outputValue.push(userInputValueLower[index]);
+		else if ( elm !== ' ' && toggleCaseFlag === true && elm.match(new RegExp('[a-zA-Z]')) ){
+			outputValue.push(userInputValue[index].toUpperCase());
+			toggleCaseFlag = false;
 		}
+		else { outputValue.push(userInputValue[index]); }
 	}
 	convertedText = outputValue.join('');
 	output.value = convertedText;
